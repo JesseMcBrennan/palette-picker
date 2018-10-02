@@ -1,7 +1,10 @@
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser')
 
 app.set('port', 3000);
+
+app.use(bodyParser.json())
 
 app.use(express.static('public/'));
 app.locals.title ='Palette Picker'

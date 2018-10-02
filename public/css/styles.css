@@ -1,5 +1,6 @@
 body {
-  
+  font-family: 'Open Sans', sans-serif;
+  margin: auto 0;
 }
 
 .card {
@@ -7,12 +8,13 @@ body {
   align-items: center;
   flex-direction: column-reverse;
   width: 20%;
+  color: #00000080;
 }
 
 .title-bar {
   display: flex;
   justify-content: center;
-  background-color: #487F82
+  background-color: #53DFB490;
 }
 
 
@@ -37,11 +39,11 @@ body {
 }
 
 article {
-
+  
 }
 
 .colors {
   display: flex;
   height: 30em;
-  width: 100%;
+  flex: 1;
 }
