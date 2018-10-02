@@ -1,0 +1,47 @@
+body {
+  
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  width: 20%;
+}
+
+.title-bar {
+  display: flex;
+  justify-content: center;
+  background-color: #487F82
+}
+
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+.input-fields {
+  height: 10em;
+  display: flex;
+  justify-content: center;
+  background-color: #53DFB4
+}
+
+.user-input {
+  height: 40px;
+}
+
+.user-click {
+  height: 47px;
+}
+
+article {
+
+}
+
+.colors {
+  display: flex;
+  height: 30em;
+  width: 100%;
+}
