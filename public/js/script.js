@@ -1,7 +1,6 @@
 let colorsArray = []
 
 randomColorGenerator = () => {
-  // let colorsArray = []
   if(colorsArray.length < 5) {
   for (i = 0; i < 5; i++) {
     let randomColor = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);}).toUpperCase();
@@ -16,19 +15,27 @@ $(document).ready(() => {
   displayColors(colors)
 })
  
-// $(document).ready(() => {
-//   fetch('api/v1/colors')
-//   .then(response => {
-//     return response.json()
-//   }).then(colors => {
-//   displayColors(colors)
-//   })
-// })
+$(document).ready(() => {
+  fetch('api/v1/projects')
+  .then(response => {
+    return response.json()
+  }).then(colors => {
+  displayColors(colors)
+  })
+})
+
+function toggleLock() {
+  let locked = '../assets/lock.svg'
+  let unlocked = '../assets/unlock.svg'
+
+  $(this).toggleClass('locked');
+  $(this).attr('src', $(this).hasClass('locked') ? locked : unlocked);
+}
 
 displayColors = (colors) => {
   $('.colors').empty('.card')
   return mappedColors = colors.map(color => {
-    return $('.colors').prepend(`<div class="card" style="background-color:${color}">${color}</div>`)
+    return $('.colors').prepend(`<div class="card" style="background-color:${color}">${color}<img class="unlocked" src="../assets/unlock.svg"></img></div>`)
   })
 }
 
@@ -40,9 +47,7 @@ postColors = () => {
 }).then(response => response.json())
 }
 
-$(this).parent('card').on("click", function() {
-  console.log('card click')
-})
+$('.colors').on("click", ".card img", toggleLock);
 
 $('body').on("keypress",(e) => {
   if(e.keyCode == 32) {
