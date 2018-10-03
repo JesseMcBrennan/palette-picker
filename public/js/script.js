@@ -32,12 +32,11 @@ displayColors = (colors) => {
   })
 }
 
-
 postColors = () => {
   const savedArray = colorsArray
-  return fetch('/api/v1/colors', { method: 'POST', headers:  {
+  return fetch('/api/v1/palettes', { method: 'POST', headers:  {
     "Content-Type": "application/json"},
-    body: JSON.stringify(this.savedColors)
+    body: JSON.stringify(savedArray)
 }).then(response => response.json())
 }
 

@@ -24,6 +24,14 @@ app.get('/api/v1/colors', (request, response) => {
   response.status(200).json(app.locals.colors)
 })
 
+app.post('/api/v1/palettes', (request, response) => {
+  response.status(200).json(app.locals.colors)
+})
+
+app.get('/api/v1/palettes', (request, response) => {
+  response.status(200).json(app.locals.colors)
+})
+
 app.listen(app.get('port'), () => {
   console.log(`App is running on ${app.get('port')}.`)
 })
