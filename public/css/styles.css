@@ -42,6 +42,10 @@ article {
   
 }
 
+img {
+  height: 3em;
+}
+
 .colors {
   display: flex;
   height: 30em;
