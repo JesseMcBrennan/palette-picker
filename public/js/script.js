@@ -1,4 +1,10 @@
+
 let colorsArray = []
+
+$(document).ready(() => {
+  const colors = randomColorGenerator()
+  displayColors(colors)
+})
 
 randomColorGenerator = () => {
   if(colorsArray.length < 5) {
@@ -10,10 +16,6 @@ randomColorGenerator = () => {
   return colorsArray
 }
 
-$(document).ready(() => {
-  const colors = randomColorGenerator()
-  displayColors(colors)
-})
  
 $(document).ready(() => {
   fetch('api/v1/projects')
@@ -23,6 +25,37 @@ $(document).ready(() => {
   displayColors(colors)
   })
 })
+
+// function updateColors() {
+//   $('.colors').each(function(i) {
+//     if($(this).attr('src', $(this).hasClass('locked'))) {
+//       return;
+//     } else {
+//       let color;
+//       if(colors.length) {
+//         color = colors[i]
+//       } else {
+//         randomColorGenerator()
+//       }
+//     }
+//   })
+// }
+
+
+// function updateColors(colors = []) {
+//   currentColors = [];
+//   $('.colors').each(function(i) {
+//     if($(this).attr('img', $(this).hasClass('locked'))) {
+//       } else {
+//     let color;
+//     if(colors.lenght) {
+//       color = colors[i]
+//     } else {
+//       color = randomColorGenerator()
+//     }
+//     }
+//   })
+// }
 
 function toggleLock() {
   let locked = '../assets/lock.svg'
@@ -53,6 +86,7 @@ $('body').on("keypress",(e) => {
   if(e.keyCode == 32) {
     colorsArray = []
     let colors = randomColorGenerator();
+    // updateColors()
     displayColors(colors);
   }
 })
