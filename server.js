@@ -20,10 +20,6 @@ app.locals.title ='Palette Picker'
 //   {id: 5, color: '#D7C62A'}
 // ]
 
-app.get('/', (request, response) => {
-  response.sendFile(_dirname + '/public/index.html')
-})
-
 app.get('/api/v1/projects', (request, response) => {
   database('projects').select()
     .then((projects) => {
