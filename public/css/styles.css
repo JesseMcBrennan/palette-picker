@@ -3,6 +3,11 @@ body {
   margin: auto 0;
 }
 
+.main-container {
+  display: flex;
+  flex-direction: row;
+}
+
 .card {
   display: flex;
   align-items: center;
@@ -14,9 +19,8 @@ body {
 .title-bar {
   display: flex;
   justify-content: center;
-  background-color: #53DFB490;
+  background-color: #53DFB4;
 }
-
 
 .title {
   display: flex;
@@ -24,18 +28,36 @@ body {
 }
 
 .input-fields {
-  height: 10em;
   display: flex;
   justify-content: center;
-  background-color: #53DFB4
+  background-color: #E5E5E5;
+  flex-direction: column;
+  width: 20%;
+  padding-bottom: 55vh;
 }
 
-.user-input {
+.palette-name {
   height: 40px;
+  border-radius: 3px;
+  
 }
 
 .user-click {
   height: 47px;
+}
+
+.submit-project {
+  height: 47px;
+}
+
+.projects-form {
+  display: flex;
+  justify-content: center;
+}
+
+.project-selection {
+  height: 47px;
+  width: 100%;
 }
 
 article {
@@ -48,6 +70,6 @@ img {
 
 .colors {
   display: flex;
-  height: 30em;
+  height: 88vh;
   flex: 1;
 }

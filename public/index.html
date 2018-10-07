@@ -7,19 +7,30 @@
     <title>Document</title>
   </head>
   <body>
-    <div>
-      <div class="title-bar">
-        <h1 class="title">Palette Picker</h1>
-      </div>
+    <div class="title-bar">
+      <h1 class="title">Palette Picker</h1>
+    </div>
+    <div class="main-container">
       <article class="colors">
         
       </article>
       <div class="input-fields">
-        <input type='text' placeholder="Enter your placeholder text" class="user-input"></input>
-        <button class='user-click'>Submit</button>
+        <form>
+        <input type='text' placeholder="Palette Name" class="palette-name"></input>
+        <button class='user-click'>Save Palette</button>
+      </form>
+        <form class="projects-form">
+          <select name="projects" class="project-selection">
+          </select>
+          <button class="submit-project">Project</button>
+        </form>
+        <select name="projects-two" class="project-selection">
+          </select>
+          <button class="submit-project">Project</button>
+        </form>
       </div>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script  id="data" type="text/javascript" src="./js/script.js"></script>
     </div>
   </body>
-</html>
+</html> 
