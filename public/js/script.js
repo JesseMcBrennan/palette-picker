@@ -72,9 +72,7 @@ function toggleLock() {
   $(this).attr('src', $(this).hasClass('locked') ? locked : unlocked);
   $(this).attr('src', $(this).hasClass('') ? unlocked : locked);
 }
-
-
-  
+ 
 displayColors = (colors) => {
   $('.colors').empty('.card')
   if($('.colors').hasClass("locked ")) {
@@ -105,6 +103,7 @@ $('.colors').on("click", ".card img", toggleLock);
 function savePalette(event) {
   console.log('hi')
 }
+
 
 
 
